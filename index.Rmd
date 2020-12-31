@@ -1,0 +1,5 @@
+---
+title: "Formalized Curiosity"
+site: distill::distill_website
+listing: posts
+---

@@ -1,0 +1,16 @@
+name: "distill-blog"
+title: "Formalized Curiosity"
+description: |
+  Formalized Curiosity
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Talks"
+      href: talks.html
+    - text: "Projects"
+      href: projects.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
