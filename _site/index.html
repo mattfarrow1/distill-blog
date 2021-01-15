@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
+  <link rel="alternate" type="application/rss+xml" href="https://mattfarrow.co/index.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -85,26 +86,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Formalized Curiosity</title>
+  <title>Data Science &amp; Fundraising: Posts</title>
 
 
+  <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico"/>
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Formalized Curiosity"/>
+  <meta property="og:title" content="Data Science &amp; Fundraising: Posts"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Formalized Curiosity"/>
+  <meta property="og:site_name" content="Data Science &amp; Fundraising"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Formalized Curiosity"/>
+  <meta property="twitter:title" content="Data Science &amp; Fundraising: Posts"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Formalized Curiosity"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output","site","css","listing"]}},"value":[{"type":"character","attributes":{},"value":["Posts"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["styles.css"]},{"type":"character","attributes":{},"value":["posts"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1992,8 +1994,456 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  @import url("pygment_highlights.css");
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
+  @import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Roboto+Condensed|Open+Sans|Open+Sans+Condensed:300|Open+Sans+Condensed:light|Lato|Lora|Fira+Sans|Fira+Mono");
+
+
+
+  body {
+    font-family: Roboto, 'Libre Baskerville', sans-serif; /*, et-book, "Palatino Linotype", "Palatino LT STD", 'Lora', serif*/
+    font-size: 15px;
+    font-weight: 300;
+    color: #404040;        /* #404040*/
+    position: relative;
+    background: #FFFFF8;      /* {{ site.page-col }}; */
+    {% if site.page-img %}
+    background-image: url({{ site.page-img }});
+    background-attachment: fixed;
+    {% endif %}
+  }
+
+  p {
+    color: #404040;  
+    font-family: Roboto, 'Libre Baskerville', 'Helvetica Neue' ; /*, et-book, "Palatino Linotype", "Palatino LT STD", 'Lora', serif*/
+    line-height: 1.5;
+    font-weight: 300;
+    margin: 30px 0;
+  }
+
+  p a {
+    /* text-decoration: underline */
+    color: #03b3ff;
+  }
+
+
+
+  /* link effects; appendix apply to footnote return links */
+  p a, li a, d-appendix a, a.footnote-backlink {
+      color: #03b3ff;
+      display: inline-block;
+      text-decoration: none;
+      transition: background-size .4s ease;
+      border-bottom: 0px solid;
+  }
+
+  p a:after, li a:after, d-appendix a:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1.5px;
+      background: #FF4F03;
+      transition: width .3s;
+  }
+
+
+  p a:hover::after, li a:hover::after, d-appendix a:hover::after {
+    width: 100%;
+    //transition: width .3s;
+   }
+
+  /* for twitter etc icon links */
+  .social-icon {
+    color: #03b3ff;
+    background-image: none;  /* remove hover line*/
+    background-size: 0 100%;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    transition: background-size .4s ease;
+    border-bottom: 0px solid;
+  }
+
+
+  d-footnote-list a.footnote-backlink {
+      color:  #03b3ff !important; /* otherwise some inline injection will occur*/
+      padding-left: 0.5em;
+  }
+
+  .categories li > a:hover {
+    border-bottom: none !important;
+  }
+
+  /* remove underline for TOC */
+  .d-contents nav a:hover {
+      text-decoration: none;
+  }
+
+
+  .img-cscar {
+    width: 10%;
+  }
+
+
+  /* text highlights */
+  .emph, em {
+    color: #E32D00 ;  /*#ff5500 #D14300*/
+    font-style: normal;
+    font-weight: 450;
+  }
+
+  strong {
+    color: #404040;  
+  }
+
+  /* pack func and objclass colors initially come from hcl(seq(90,360, length.out=4), c=80, l=80); redone for contrast*/
+  .pack {
+    color: #1f65b7; /* #990071 #AC9CFF #e41a1c*/
+    font-weight: 400;
+  }
+
+  .func {
+    color: #007020;   /*#007199 #00CBB6; #984ea3; can just use `` instead*/
+    font-weight: 400;
+  }
+
+  .objclass {
+    color:  #947100;  /*#AAB400 #4daf4a; #FFC5D0*/
+    font-weight: 400;
+  }
+
+  /* object/class via inline code */
+  p code {
+    color: #947100;
+  }
+
+  /* distill specific */
+
+  d-title h1 {
+    font-family: 'Open Sans Condensed', Roboto, Helvetica, Arial, sans;
+    font-weight: 200;
+    font-size: 50px;
+    color: #ff5500;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+  }
+
+  .index-title h1 {
+    font-family: 'Open Sans Condensed', Roboto, Helvetica, Arial, sans;
+    font-weight: 200;
+    font-size: 75px;
+    font-variant: small-caps;
+    text-align: center;
+    color: #ff5500;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    border-bottom: 0; /*same as default h2*/
+    padding-bottom: 1rem; 
+  }
+
+  d-article h1 {
+    font-family: 'Open Sans Condensed', Roboto, Helvetica, Arial, sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 175%;
+    color: #ff5500;
+    margin-top: 2.1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /*same as default h2*/
+    padding-bottom: 1rem;
+  }
+
+  d-article h2 {
+    font-family: 'Open Sans Condensed', Roboto, Helvetica, Arial, sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150%;
+    color: #ff5500;
+    margin-top: 2.1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+    /* to remove will require something to keep the inline from inserting
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    padding-bottom: 1rem; 
+    */
+  }
+
+
+  d-article h3 {
+    font-family: 'Open Sans Condensed', Roboto, Helvetica, Arial, sans;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 125%;
+    color: #ff5500;
+    opacity: .9;
+    margin-top: 2rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+  }
+
+  d-article  h4 {
+    font-family: 'Open Sans Condensed', Roboto, Helvetica, Arial, sans;
+    font-style: normal;
+    text-transform: none;  /*default is uppercase*/
+    font-weight: 400;
+    font-size: 110%;
+    color: #ff5500;
+    opacity: .9;
+    margin-top: 1.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+  }
+
+  d-article  h5 {
+    font-family: 'Open Sans Condensed', Roboto, Helvetica, Arial, sans;
+    font-style: normal;
+    text-transform: none;  /*default is uppercase*/
+    font-weight: 400;
+    font-size: 100%;
+    color: #ff5500;
+    opacity: .9;
+    margin-top: 1.9rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+  }
+
+
+  .posts-list .post-preview h2 {
+    font-family: 'Open Sans Condensed', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150%;
+    color: #ff5500;
+    margin-top: 2.1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+  }
+
+  .posts-list .description h2 {
+    font-family: 'Open Sans Condensed', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 150%;
+    color: #ff5500;
+    margin-top: 2.1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1;
+  }
+
+
+  d-article a:hover {
+    text-decoration: none;
+    border-bottom: none;
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+
+  /* changing this will bork the phone; revisit later
+  .base-grid, distill-header, d-title, d-abstract, d-article, d-appendix, distill-appendix, d-byline, d-footnote-list, d-citation-list, distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 80px [text-start kicker-end] 80px 80px 80px 80px 80px 80px 80px 80px [text-end gutter-start] 80px [middle-end] 80px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+  }
+  */
+
+  .distill-site-nav {
+    color: #FFFFFF;
+    background-color: #4682b4;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: #0085a1;
+  }
+
+  .distill-site-header {
+  }
+
+  .distill-site-footer {
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .posts-list .post-preview .thumbnail img {
+      width: 100%;
+      background: transparent;
+      display: block;
+  }
+
+
+
+  /* latex */
+  .math {
+    color: #404040;  
+    font-weight: normal;
+    font-size: 90%;
+  }
+
+  /* code */
+
+  /* will now work as of latest distill version*/
+
+  d-article div.sourceCode code, d-article pre code {
+    font-family: 'Roboto Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    color: #404040FF;
+    font-size: 90%;
+  }
+
+  d-article pre {
+    background-color: #FFFFFF;
+  }
+
+  /* Otherwise will leave a white background visible at bottom of code chunks*/
+  d-article div.sourceCode {
+    background-color: #FFFFFF;
+  }
+
+  /* code results/output */
+  pre.text-output {
+    font-family: 'Roboto Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    color: #000000CC;
+  }
+
+
+  /* is read to a point, only the space before the code */
+  d-code {
+    font-family: 'Roboto Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 100%;
+    margin: 0px 0 10px 0;
+  }
+
+  /* override arbitrary conversion of base R functions to colored links to rdrr.io */
+  code span.fu {
+    color: #007020;
+    font-weight: bold;
+  }
+
+
+  /* this is literally the css path copied from firefox dev tools, useless */
+  code#code-container.language-clike {
+    font-size: 500%;
+    color: red;
+  }
+
+  #shadowroot pre code#code-container.language-clike {
+    font-size: 500%;
+    color: red;
+  }
+
+  .token.function {
+    font-size: 200%;
+  }
+
+  pre, xmp, plaintext, listing {
+      display: block;
+      font-family: 'Roboto Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+      white-space: pre;
+      margin: 1em 0px;
+  }
+
+  /* to fix aside; see issue #39 https://github.com/rstudio/distill/issues/39*/ 
+  @media(min-width:768px) {
+    aside {
+        margin-top: -00px;
+        margin-bottom: -500px;
+    }
+  }
+
+
+  /* images */
+  img {
+    background: transparent;
+  }
+
+  /* list */
+
+  ul {
+    list-style: none; /* Remove default bullets */
+  }
+
+  ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #ff5500BF; /* Change the color */
+    size: 5;
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    /*margin-left: 0em;  Also needed for space (tweak if needed) */
+  }
+
+
+
+  /* main part on front page with description */
+
+  /*
+  .posts-with-sidebar .posts-list {
+    float: left;
+    width: 72%;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+  */
+
+  /* sidebar on front page with category listing */
+
+  .posts-with-sidebar .posts-sidebar {
+    float: right;
+    width: 10%;    /* default 20, made narrow */
+    margin-top: 60px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  /* attempt to make result not so wide/spacious */ 
+
+  .posts-with-sidebar .posts-list {
+    width: 66% !important;
+    margin-left: 11%;
+  }
+
+  .posts-sidebar {
+    font-size: 12px;
+    margin-right: 10%;
+  }
+
+  /* tables */
+
+  d-article table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  /* add spacing for figs and tables, so text and other figs/tables don't 
+  start right up at their border */
+  .l-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* font-awesome probably best to do inline for articles as these are spread around */
+
+  .fas, .fab, .far, .fa {
+  }
+  </style>
   <!--/radix_placeholder_site_in_header-->
 
+  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -2002,7 +2452,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Formalized Curiosity","authors":[]}
+{"title":"Posts","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2010,12 +2460,25 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">Formalized Curiosity</a>
+<a class="logo" href="index.html">
+<img src="images/logo.png" alt="Logo"/>
+</a>
+<a href="index.html" class="title">Data Science &amp; Fundraising</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
-<a href="index.html">Home</a>
 <a href="about.html">About</a>
+<a href="talks.html">Talks</a>
+<a href="projects.html">Projects</a>
+<a href="https://github.com/mattfarrow1">
+<i class="fab fa-github-alt fa-1x" aria-hidden="true"></i>
+</a>
+<a href="index.xml">
+<i class="fa fa-rss fa-1x" aria-hidden="true"></i>
+</a>
+<a href="https://twitter.com/_MattFarrow">
+<i class="fab fa-twitter fa-1x" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2157,25 +2620,7 @@ function init_posts_list() {
 
 <div class="posts-container posts-apply-limit l-page">
 <div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Formalized Curiosity">Formalized Curiosity</h1>
-<a href="posts/welcome/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">Dec. 31, 2020</div>
-<div class="dt-authors">
-<div class="dt-author">Nora Jones</div>
-</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Welcome to Formalized Curiosity</h2>
-<div class="dt-tags"></div>
-<p>Welcome to our new blog, Formalized Curiosity. We hope you enjoy 
-reading what we have to say!</p>
-</div>
-</a>
+<h1 class="posts-list-caption" data-caption="Posts">Posts</h1>
 </div>
 <div class="posts-more">
 <a href="#">More articles &raquo;</a>
@@ -2184,7 +2629,7 @@ reading what we have to say!</p>
 <!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Formalized Curiosity</h1>
+<h1>Posts</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -2204,10 +2649,21 @@ reading what we have to say!</p>
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+<h3 id="updates-and-corrections">Corrections</h3>
+<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/mattfarrow1/distill-blog/issues/new">create an issue</a> on the source repository.</p>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
+<div class="distill-site-nav distill-site-footer">
+<div>
+
+
+Matt Farrow • 2021 •  <a href="https://mattfarrow.co">https://mattfarrow.co/</a>
+</div>
+</div>
 <!--/radix_placeholder_navigation_after_body-->
+
 
 </body>
 

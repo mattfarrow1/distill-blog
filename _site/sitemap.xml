@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
+  <url>
+    <loc>https://mattfarrow.co/about.html</loc>
+    <lastmod>2021-01-03T21:06:40-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mattfarrow.co/code.html</loc>
+    <lastmod>2021-01-01T19:53:18-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mattfarrow.co/documents.html</loc>
+    <lastmod>2021-01-01T19:52:22-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mattfarrow.co/</loc>
+    <lastmod>2021-01-15T13:12:55-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mattfarrow.co/projects.html</loc>
+    <lastmod>2021-01-08T14:53:54-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mattfarrow.co/readme.html</loc>
+    <lastmod>2020-12-31T15:20:05-06:00</lastmod>
+  </url>
+  <url>
+    <loc>https://mattfarrow.co/talks.html</loc>
+    <lastmod>2021-01-08T14:20:16-06:00</lastmod>
+  </url>
+</urlset>

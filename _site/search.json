@@ -2,18 +2,53 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this blog",
+      "title": "A little bit about me...",
+      "author": [],
+      "contents": "\n\nWhat I do\nIn my day job I’m the Assistant Director of Prospect Management at SMU. By night, I’m pursuing my master’s degree in Data Science from SMU.\nPersonal\nHusband of a rockstar. Father of two kids and two dogs. Perpetually tired.\n\n\n\n",
+      "last_modified": "2021-01-15T13:14:49-06:00"
+    },
+    {
+      "path": "code.html",
+      "title": "Code",
       "description": "Some additional details about the blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-12-31T14:40:24-06:00"
+      "last_modified": "2021-01-15T13:14:50-06:00"
+    },
+    {
+      "path": "documents.html",
+      "title": "Documents",
+      "description": "Some additional details about the blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-01-15T13:14:50-06:00"
     },
     {
       "path": "index.html",
-      "title": "Formalized Curiosity",
+      "title": "Posts",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2020-12-31T14:40:24-06:00"
+      "last_modified": "2021-01-15T13:14:51-06:00"
+    },
+    {
+      "path": "projects.html",
+      "title": "Projects",
+      "author": [],
+      "contents": "\nIncluded here are projects from my DataScience@SMU master’s program as well as my work in Prospect Development at SMU.\nDataScience@SMU\nApplied Statistics (2020)\nBank Marketing\nUsing a bank marketing data set provided by the UCI Machine Learning Repository, the classification goal of this project was to predict if the client will subscribe a term deposit.\n\nPartners: Edward Roske & Michael Olheiser\n\nRepository\nReport\nProject 1\n\nPartners: Megan Ball & Neddy\n\nRepository\nReport\nDoing Data Science (2020)\nEmployee Attrition\nThe goal for this project was to identify the top three factors that contributed to attrition at an unknown company and to create a model to predict attrition.\nRepository\nPresentation\nCraft Breweries\n\nPartner: Megan Ball\n\nThe goal for this project was to perform an exploratory data analysis of a craft beers data set containing over 2,000 canned craft beers from over 500 breweries in the United States and present our finding in a short video presentation to an imaginary executive at Budweiser.\nRepository\nPresentation\nStatistical Foundations of Data Science (2020)\nPredict Residential Home Prices\n\nPartner: Dawson\n\nUsing the Ames Housing Data Set as originally created by Dean De Cock, we were asked to answer several questions using forward, backward, stepwise selection as well as multiple linear regression.\nRepository\nReport\nSMU\nProject 1\nProject 2\nProject 3\n\n\n\n",
+      "last_modified": "2021-01-15T13:14:51-06:00"
+    },
+    {
+      "path": "readme.html",
+      "author": [],
+      "contents": "",
+      "last_modified": "2021-01-15T13:14:53-06:00"
+    },
+    {
+      "path": "talks.html",
+      "title": "Talks",
+      "author": [],
+      "contents": "\nExcel to R: Upgrade Your Skills and Improve Your Workflow\nOct. 7, 2020 | Apra Data Science Now\nWorkshop\nRepository\nHave you ever deleted a column of data that you were sure you didn’t need only to realize it was critical? Have you ever struggled to remember how you came up with that prospect pool? Have gift officers ever questioned why a prospect ended up in their portfolios?\nMicrosoft Excel is a powerful, industry-standard tool, but is it the best tool? R, as a programming language, can appear daunting, but this open-source software can provide incredible benefits for those willing to take the plunge.\nWe’ll walk through a case study and look at why you might want to consider R, how to get started analyzing and visualizing your data, and where to go to learn more.\nWorking Smarter with Excel\nAug. 26, 2020 | Apra Prospect Development 2020\nRepository\nSlides\nData\nCheat Sheet\nExcel is ubiquitous in today’s office environments, but behind the simple spreadsheet is a robust set of tools that can make your work faster, more efficient, and less error prone.\nThis presentation will use a large sample dataset to answer questions, build prospect lists, and provide insights to leadership.\nI Should Have Majored in Excel\nNov. 8, 2019 | Apra North Texas Conference\nSlides\nBuilding upon my previous Apra North Texas talk, Excel is a ubiquitous program in today’s office environment. It is also incredibly under-utilized. In this talk, I’ll share some simple tricks to harness more of the power of Excel to make your work more efficient. This talk is specifically tailored to the fundraising and prospect development community.\nI Didn’t Know Excel Could Do That\nNov. 11, 2017 | Apra North Texas Conference\nSlides\nExcel is a ubiquitous program in today’s office environment. It is also incredibly under-utilized. In this talk, I’ll share some simple tricks to harness more of the power of Excel to make your work more efficient. This talk is specifically tailored to the fundraising and prospect development community.\n\n\n\n",
+      "last_modified": "2021-01-15T13:14:53-06:00"
     }
   ],
   "collections": ["posts/posts.json"]

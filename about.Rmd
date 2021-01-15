@@ -1,9 +1,13 @@
 ---
-title: "About this blog"
-description: |
-  Some additional details about the blog
+title: "A little bit about me..."
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+<span itemscope itemtype="http://schema.org/Person">
+
+### What I do
+
+In my day job I'm the Assistant Director of Prospect Management at SMU. By night, I'm pursuing my master's degree in Data Science from SMU. 
+
+### Personal
+
+Husband of a rockstar. Father of two kids and two dogs. Perpetually tired. 

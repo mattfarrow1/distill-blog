@@ -1,5 +1,17 @@
 ---
-title: "Formalized Curiosity"
+title: "Posts"  
+# to remove double title in tab title, use same title as _site.yaml; to use ;title: index title', leave blank
+# author:
+#   - name: 
+#     url: 
+#     affiliation: 
+#     affiliation_url: 
+#     mailto: 
+# date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  distill::distill_article:
+    self_contained: false
 site: distill::distill_website
+css: [styles.css]
 listing: posts
 ---

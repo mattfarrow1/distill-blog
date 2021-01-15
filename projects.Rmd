@@ -1,9 +1,63 @@
+
 ---
-title: "Projects"
-description: |
-  Some additional details about the blog
+title: Projects
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+Included here are projects from my DataScience@SMU master's program as well as my work in Prospect Development at SMU.
+
+## DataScience@SMU
+
+### Applied Statistics (2020)
+
+### Bank Marketing
+
+Using a bank marketing data set provided by the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/bank%20marketing#), the classification goal of this project was to predict if the client will subscribe a term deposit.
+
+> Partners: Edward Roske & Michael Olheiser
+
+- [Repository](https://github.com/mattfarrow1/6372-project-2)
+- [Report](https://github.com/mattfarrow1/6372-project-2/blob/main/docs/Farrow_Olheiser_Roske_Project2_v1.7%20FINAL.docx)
+
+### Project 1
+
+> Partners: [Megan Ball](https://github.com/megball) & Neddy
+
+- [Repository](https://github.com/mattfarrow1/6372-project-1)
+- [Report](https://github.com/mattfarrow1/6372-project-1/blob/master/docs/MF_MB_NN_Project1.docx)
+
+### Doing Data Science (2020)
+
+#### Employee Attrition
+
+The goal for this project was to identify the top three factors that contributed to attrition at an unknown company and to create a model to predict attrition.
+
+- [Repository](https://github.com/mattfarrow1/6306-project-2)
+- [Presentation](https://youtu.be/RNPZFh9Q1VY)
+
+#### Craft Breweries
+
+> Partner: [Megan Ball](https://github.com/megball)
+
+The goal for this project was to perform an exploratory data analysis of a [craft beers data set](https://www.kaggle.com/nickhould/craft-cans) containing over 2,000 canned craft beers from over 500 breweries in the United States and present our finding in a short video presentation to an imaginary executive at Budweiser.
+
+- [Repository](https://github.com/mattfarrow1/6306-project-1)
+- [Presentation](https://youtu.be/0wok011UzUA)
+
+### Statistical Foundations of Data Science (2020)
+
+#### Predict Residential Home Prices
+
+> Partner: Dawson
+
+Using the [Ames Housing Data Set](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/overview) as originally created by [Dean De Cock](http://jse.amstat.org/v19n3/decock.pdf), we were asked to answer several questions using forward, backward, stepwise selection as well as multiple linear regression. 
+
+- [Repository](https://github.com/mattfarrow1/Kaggle-Home-Prices)
+- [Report](https://github.com/mattfarrow1/Kaggle-Home-Prices/blob/master/Dawson%20Farrow%20Kaggle%20Project.docx)
+
+## SMU
+
+Project 1
+
+Project 2
+
+Project 3

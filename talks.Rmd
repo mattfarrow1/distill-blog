@@ -1,9 +1,45 @@
 ---
 title: "Talks"
-description: |
-  Presentations I've Given
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+## Excel to R: Upgrade Your Skills and Improve Your Workflow
+
+**Oct. 7, 2020 | Apra Data Science Now**
+
+- [Workshop](https://matt-farrow.shinyapps.io/excel-to-r/)
+- [Repository](https://github.com/mattfarrow1/apra-excel-to-r)
+
+Have you ever deleted a column of data that you were sure you didn't need only to realize it was critical? Have you ever struggled to remember how you came up with that prospect pool? Have gift officers ever questioned why a prospect ended up in their portfolios?
+
+Microsoft Excel is a powerful, industry-standard tool, but is it the best tool? R, as a programming language, can appear daunting, but this open-source software can provide incredible benefits for those willing to take the plunge.
+
+We'll walk through a case study and look at why you might want to consider R, how to get started analyzing and visualizing your data, and where to go to learn more.
+
+## Working Smarter with Excel
+
+**Aug. 26, 2020 | Apra Prospect Development 2020**
+
+- [Repository](https://github.com/mattfarrow1/apra-working-smarter-with-excel)
+- [Slides](https://github.com/mattfarrow1/apra-working-smarter-with-excel/blob/master/working-smarter-with-excel.key)
+- [Data](https://github.com/mattfarrow1/apra-working-smarter-with-excel/blob/master/Apra%20Dataset.xlsx)
+- [Cheat Sheet](https://github.com/mattfarrow1/apra-working-smarter-with-excel/blob/master/Working%20Smarter%20with%20Excel%20Cheat%20Sheet.pdf)
+
+Excel is ubiquitous in today's office environments, but behind the simple spreadsheet is a robust set of tools that can make your work faster, more efficient, and less error prone.
+
+This presentation will use a large sample dataset to answer questions, build prospect lists, and provide insights to leadership.
+
+## I Should Have Majored in Excel
+
+**Nov. 8, 2019 | Apra North Texas Conference**
+
+- [Slides](https://mattfarrow1.github.io/apra-even-more-with-excel/slides#1)
+
+Building upon my previous Apra North Texas talk, Excel is a ubiquitous program in today's office environment. It is also incredibly under-utilized. In this talk, I'll share some simple tricks to harness more of the power of Excel to make your work more efficient. This talk is specifically tailored to the fundraising and prospect development community.
+
+## I Didn't Know Excel Could Do That
+
+**Nov. 11, 2017 | Apra North Texas Conference**
+
+- [Slides](https://mattfarrow1.github.io/apra-doing-more-with-excel/slides#1)
+
+Excel is a ubiquitous program in today's office environment. It is also incredibly under-utilized. In this talk, I'll share some simple tricks to harness more of the power of Excel to make your work more efficient. This talk is specifically tailored to the fundraising and prospect development community.
